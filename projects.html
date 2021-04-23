@@ -2,6 +2,7 @@
 
 <html>
 
+
   <head>
     <title>Web Portfolio</title>
     <link rel="stylesheet" href="./resources/css/reset.css">
@@ -15,11 +16,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
   </head>
 
+
+
+
+
   <body>
     
     <div class="grid-container">
       <img id="photo_2" src="resources/images/cs_photo_2.png">
       
+
+
+
+      <!-- WEBSITE HEADER -->
       <header>
         <div class="flex-container">
           <span class="logo"><img src="resources/images/jc_logo_small_2.png"></span>
@@ -34,24 +43,18 @@
       </header>
 
   
-    <section>
-     <!-- <img src="resources/images/computer-science-wp.jpg"> -->
-     
-    </section>
-    
+
+      <!--  -->
       <article class="about_me_text">
-        <h1>About me:</h1>
-        <p>My name is João Correia, I'm 34 years old and I live in Setúbal, Portugal.</p>
-        <p>I'm a beginner web developer and I've been studying programming since February 2021.</p>
-        <p>Welcome to my Web Portfolio, here you can find all the <a href="projects.html">projects</a> I've developed so far.</p>
-        <p>I'm a self taught programmer and I began my programming carrer with the Full-Stack Software Engineer by Codecademy. </p>
-        <p>I'm developing skills in Javascript, HTML and CSS.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi interdum, libero in euismod dapibus.</p>
-        <p>Estibulum ac fringilla lorem, vel ornare quam. Nullam rhoncus viverra eros, eu commodo mauris vulputate at. </p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi interdum, libero in euismod dapibus.</p>
-        <p>Estibulum ac fringilla lorem, vel ornare quam. Nullam rhoncus viverra eros, eu commodo mauris vulputate at. </p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi interdum, libero in euismod dapibus.</p>
-        <p>Estibulum ac fringilla lorem, vel ornare quam. Nullam rhoncus viverra eros, eu commodo mauris vulputate at. </p>
+        <h1>Projects:</h1>
+        <p><a href="https://jpscorreia.github.io/html_cheatsheet/">HTML Cheatsheet</a></p>
+        <p><a href="https://jpscorreia.github.io/excursion/">Excursion</a></p>
+        <p><a href="https://jpscorreia.github.io/website_design_systems/">Website Style Guide</a></p>
+        <p><a href="https://jpscorreia.github.io/TeaCozy/">Tea Cozy</a></p>
+        <p><a href="https://jpscorreia.github.io/Fotomat/">Fotomat</a></p>
+        <p><a href="https://jpscorreia.github.io/SetubalClub/">Setúbal Club</a></p>
+        <p><a href="https://jpscorreia.github.io/SimianSoftware/">Simian Software</a></p>
+        <p><a href="https://jpscorreia.github.io/">Portfolio</a></p>
       </article>
 
        <div class="about_me_photo">
@@ -66,12 +69,33 @@
 
   <footer>
     <div class="flex-container">      
+      <span>Developed by João Correia. This Website has been online for <span id="time-container">0</span> seconds.</span>
       <span>© 2021 João Correia Web Portfolio, All rights reserved.</span>
-      <span>Developed by João Correia.</span>
     </div>
   </footer>
 
 
 </div>
 </body>
+
+<script>
+
+  const timeContainer = document.getElementById("time-container");
+
+  const online = "04-20-2021";
+  const online_date = new Date(online);
+
+  const intlNumberFormatter = new Intl.NumberFormat("en-US");
+
+  setInterval(() => {
+    const now = new Date();
+    const difference = Math.floor(
+      (now.getTime() - online_date.getTime()) / 1000
+    );
+
+    timeContainer.innerText = intlNumberFormatter.format(difference);
+  }, 1000);
+
+</script>
+
 </html>

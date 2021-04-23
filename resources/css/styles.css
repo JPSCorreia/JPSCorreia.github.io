@@ -138,7 +138,7 @@ section {
     border-radius: 4px;
     padding: 10px 30px;
     margin-left: 20px;
-    margin-right: 10px;
+    margin-right: 20px;
     opacity: 0.9;
 }
 
@@ -162,14 +162,8 @@ section {
  
   width: 100%;
   height: auto;
- 
+  
 }
-
-
-
-
-
-
 
 
 #photo_2 {
@@ -203,6 +197,7 @@ footer {
   font-weight: bold;
   /* background-image: url("../images/computer-science-wp.jpg"); */
   opacity: 0.9;
+  font-size: 0.9rem;
 }
 
 footer span {
@@ -240,39 +235,67 @@ footer .flex-container {
 /*   MEDIA QUERIES START   */
 
 
+/* Tablets */
 
-/* for bigger mobile screens */
+@media only screen and (max-width: 900px) {
 
-
-
-/*
-@media only screen and (max-width: 540px) {
-
-  header {
-    font-size: 1.1rem;
+  li a{
+    font-size: 1.75rem;
+       
+  }
+  
+  li {
+    margin-right: 15px;
     
   }
 
 
 
-
-  li {
-    margin-right: 5px;
+  .about_me_text {
+    grid-area: 2 / 2 / span 1 / span 10;
   }
 
+  .about_me_photo {
+    display: none;
+  }
+}
+
+
+@media only screen and (max-width: 700px) {
+.grid-container {
+  grid-gap: 20px;
+}
+
+li a{
+  margin-left: 10px;
+  
+}
+}
 
 
 
-  .grid-container {
 
-    grid-template-rows: 70px 450px 450px auto 70px;
+
+/* for bigger mobile screens */
+
+@media only screen and (max-width: 540px) {
+
+
+
+  li a{
+    margin-left: 15px;
+    
   }
 
+  li a{
+    font-size: 1.5rem;
+       
+  }
 
     p {
       padding: 5px;
       padding-top: 15px;
-      min-width:290px;
+      min-width: 290px;
     }
 
   
@@ -281,35 +304,25 @@ footer .flex-container {
 
 @media only screen and (max-width: 420px) {
 
-
-
-  header {
-    font-size: 1.1rem;
-    
+  .logo img {
+   height: 60px;
   }
 
 
-
-
-  li {
-    margin-right: 5px;
+  p {
+    padding: 5px;
+    padding-top: 15px;
+    min-width:290px;
   }
 
-  .grid-container {
-
-    grid-template-rows: 70px 450px 650px auto 70px;
+   
+  li a {
+    font-size: 1.35rem;
+    margin-left: 30px;
   }
-
-
-    p {
-      padding: 5px;
-      padding-top: 15px;
-      min-width:290px;
-    }
 
 }
 
-*/
 
 
 
@@ -321,14 +334,14 @@ footer .flex-container {
 
 /* for smaller mobile screens */
 
-/*
-@media only screen and (max-width: 370px) {
 
+@media only screen and (max-width: 375px) {
 
-  .grid-container {
-
-    grid-template-rows: 70px 660px 650px auto 70px;
+  li a {
+    font-size: 1.25rem;
+    margin-left: 5px;
   }
+
   p {
     padding: 5px;
     padding-top: 15px;
@@ -336,34 +349,40 @@ footer .flex-container {
   }
 
   footer {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 }
 
-@media only screen and (max-width: 280px) {
 
-  header {
-    font-size: 0.9rem;
-    
-  }
+
+@media only screen and (max-width: 320px) {
+
 
   p {
     padding: 5px;
     padding-top: 15px;
-    min-width: 200px;
-  }
-
-  img {
-    max-width: 260px;
+    
   }
 
 
-  footer {
+
+  html {
     font-size: 0.9rem;
+  }
+
+
+  .logo img {
+    width: 100%;
+    height: 100%;
+  }
+
+  li a {
+    margin-left: 20px;
   }
 }
 
-*/
+
+
 /*   MEDIA QUERIES END   */
 
 
